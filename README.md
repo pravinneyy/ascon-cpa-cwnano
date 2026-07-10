@@ -41,21 +41,21 @@ This gap is exactly why side-channel resistant implementations (masked, shuffled
 
 ## Results at a Glance
 
-| Parameter               |                                       Value |
-| ----------------------- | ------------------------------------------: |
-| Target cipher           |               ASCON-128 (NIST LWC standard) |
+| Parameter               |   Value                                     |
+| ----------------------- | ------------------------------------------- |
+| Target cipher           | ASCON-128 (NIST LWC standard)               |
 | Target implementation   | Unprotected C reference (`ascon128v12/ref`) |
 | Target MCU              | STM32F0 (ChipWhisperer Nano onboard target) |
-| Acquisition platform    |                          ChipWhisperer Nano |
-| Traces captured         |                                   **3,000** |
-| Samples per trace       |                                   **2,048** |
-| Region of interest      |         Samples 1,400 – 2,050 (650 samples) |
-| Final attack window     |          Samples 1,730 – 1,770 (40 samples) |
-| Leakage model           |                              Hamming Weight |
-| Distinguisher           |             Pearson correlation coefficient |
-| Attacked round          |                     Initialization, Round 1 |
-| Intermediate targets    |                          `y4` → `x1` → `y2` |
-| **Key bytes recovered** |                                 **14 / 16** |
+| Acquisition platform    | ChipWhisperer Nano                          |
+| Traces captured         | **3,000**                                   |
+| Samples per trace       | **2,048**                                   |
+| Region of interest      | Samples 1,400 – 2,050 (650 samples)         |
+| Final attack window     | Samples 1,730 – 1,770 (40 samples)          |
+| Leakage model           | Hamming Weight                              |
+| Distinguisher           | Pearson correlation coefficient             |
+| Attacked round          | Initialization, Round 1                     |
+| Intermediate targets    | `y4` → `x1` → `y2`                          |
+| **Key bytes recovered** | **14 / 16**                                 |
 
 <p align="center">
   <img src="figures/fig01_average_power_trace.png" width="49%" alt="Mean power trace across 3000 acquisitions from a ChipWhisperer Nano capture showing the device power behavior during ASCON execution">
